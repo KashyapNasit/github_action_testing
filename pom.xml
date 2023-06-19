@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.nasit</groupId>
-    <artifactId>GithubActionTesting</artifactId>
+    <artifactId>github_action_testing</artifactId>
     <version>1.0</version>
 
     <properties>
