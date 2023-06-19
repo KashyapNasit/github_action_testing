@@ -6,7 +6,7 @@
 
     <groupId>com.nasit</groupId>
     <artifactId>github_action_testing</artifactId>
-    <version>1.0</version>
+    <version>3.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
