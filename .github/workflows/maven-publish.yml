@@ -29,13 +29,11 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - uses: 'marvinpinto/action-automatic-releases@latest'
+    - name: Release
+      uses: softprops/action-gh-release@v1
       with:
-        repo_token: '${{ secrets.GITHUB_TOKEN }}'
-        automatic_release_tag: 'latest'
-        prerelease: false
-        files: |
-          *.jar
+        body: ${{ github.event.head_commit.message }}
+        generate_release_notes: true
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
