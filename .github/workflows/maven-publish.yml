@@ -8,18 +8,15 @@ on:
     branches:
       - main
 
-permissions:
-  checks: write
-  contents: write
-  pull-requests: write
-
 jobs:
 
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      packages: write
+      checks: 'write'
+      contents: 'write'
+      pull-requests: 'write'
+      id-token: 'write'
 
     steps:
     - uses: actions/checkout@v3
